@@ -153,7 +153,7 @@ body {
 /* Aplicar la animación al contenedor de la flor */
 .flower-container {
   position: absolute; /* Cambiado para poder moverlo */
-  right: 360px; /* Posiciona la flor hacia la derecha */
+  right: 330px; /* Posiciona la flor hacia la derecha */
   top: 43%; /* Posiciona la flor en el centro verticalmente */
   transform: translateY(-50%); /* Ajuste para centrarlo */
   width: 100px;
