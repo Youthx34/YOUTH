@@ -1,0 +1,299 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+    #lyrics {
+        font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+        margin-bottom: 530px;
+        letter-spacing: 3px;
+    }
+  
+  }
+
+span{
+        font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-size: 1.5rem; /* Cambia el tamaño del texto */
+    text-decoration: none; /* Para quitar el subrayado si no lo quieres */
+}
+
+a:hover {
+    color: #722F37; /* Cambia el color cuando pases el cursor sobre el enlace (opcional) */
+}
+
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(50, 194, 194);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: .9s;
+}
+.greetings > span:nth-child(7){
+    animation-delay: 1.1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+  flex-direction: column;
+  position: relative; /* Necesario para ubicar el contenedor con position:absolute */
+}
+
+/* Aplicar la animación al contenedor de la flor */
+.flower-container {
+  position: absolute; /* Cambiado para poder moverlo */
+  right: 360px; /* Posiciona la flor hacia la derecha */
+  top: 43%; /* Posiciona la flor en el centro verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrarlo */
+  width: 100px;
+  height: 200px;
+  animation: grow 2s ease-in-out forwards; /* Duración de la animación ajustada a 2 segundos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tallo de la flor */
+.stem {
+  width: 14px;
+  height: 150px;
+  background-color: rgb(6, 145, 6);
+  position: absolute;
+  border: 3px solid rgb(5, 226, 16);
+  bottom: 0;
+}
+
+/* Añadir hojas a los lados del tallo */
+.leaf {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(6, 145, 6);
+  position: absolute;
+  border-radius: 50%;
+  top: 135px; /* Ajuste para posicionar las hojas en el tallo */
+  border: 3px solid rgb(5, 226, 16); /* Borde negro para las hojas */
+}
+
+.leaf-left {
+  transform: rotate(-45deg);
+  left: -2px; /* Ajuste para posicionar a la izquierda del tallo */
+  top: 145px; 
+}
+
+.leaf-right {
+  transform: rotate(45deg);
+  right: -2px; /* Ajuste para posicionar a la derecha del tallo */
+}
+
+
+
+/* Pétalos de la flor */
+.petals {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.petal {
+  position: absolute;
+  width: 49px;
+  height: 58px;
+  background-color: rgb(229, 255, 0);
+  border-radius: 50%;
+  transform-origin: center;
+  border: 2.5px solid rgb(226, 136, 0); /* Borde negro añadido */
+}
+
+/* Pétalos originales */
+.petal1 {
+  transform: rotate(0deg) translate(0, -50px);
+}
+
+.petal2 {
+  transform: rotate(72deg) translate(0, -50px);
+}
+
+.petal3 {
+  transform: rotate(144deg) translate(0, -50px);
+}
+
+.petal4 {
+  transform: rotate(216deg) translate(0, -50px);
+}
+
+.petal5 {
+  transform: rotate(288deg) translate(0, -50px);
+}
+
+/* Nuevos pétalos intercalados */
+.petal6 {
+  transform: rotate(36deg) translate(0, -50px); /* Intercalado entre petal1 y petal2 */
+}
+
+.petal7 {
+  transform: rotate(108deg) translate(0, -50px); /* Intercalado entre petal2 y petal3 */
+}
+
+.petal8 {
+  transform: rotate(180deg) translate(0, -50px); /* Intercalado entre petal3 y petal4 */
+}
+
+.petal9 {
+  transform: rotate(252deg) translate(0, -50px); /* Intercalado entre petal4 y petal5 */
+}
+
+.petal10 {
+  transform: rotate(324deg) translate(0, -50px); /* Intercalado entre petal5 y petal1 */
+}
+
+/* Centro de la flor */
+.center {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -23px; /* Ajustado para centrarlo mejor */
+  left: 50%;
+  transform: translateX(-50%); /* Mueve el centro horizontalmente */
+  border: 3px solid rgb(255, 251, 0); /* Borde negro añadido */
+}
+
+.center2 {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(251, 255, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: -12px; /* Ajustado para centrarlo mejor */
+  left: 50%;
+  transform: translateX(-50%); /* Mueve el centro horizontalmente */
+}
+
+/* Animación de crecimiento */
+@keyframes grow {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

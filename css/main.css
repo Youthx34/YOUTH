@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+  #lyrics {
+      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+      margin-bottom: 530px;
+      letter-spacing: 3px;
+  }
+
+}
+
+:root {
+  --dark-color: #722F37;
+}
+body{
+  color: azure;
+  width: 100%;
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative; /* Necesario para el fondo */
+  overflow: hidden;   /* Oculta el contenido extra */
+  /* padding-top: -30; */
+}
+
+/* Slideshow */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Ocupa el 100% de la pantalla */
+  z-index: -1; /* Asegura que las imágenes estén detrás del contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;  /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center;  /* Centra la imagen en el contenedor */
+  animation: slideShow 15s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide1 {
+  background-image: url('../img/Casita\ del\ arbol\ 1.PNG');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('../img/Casita\ del\ arbol\ 2.jpeg');
+  animation-delay: 5s;
+}
+
+.slide3 {
+  background-image: url('../img/En\ el\ taxi\ 2.jpeg');
+  animation-delay: 10s;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  53.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
