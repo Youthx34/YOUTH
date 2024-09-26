@@ -37,33 +37,31 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Ajusta el alto para que ocupe toda la pantalla */
-  z-index: -1; /* Asegura que las imágenes estén detrás del contenido */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Asegura que no haya scroll y el contenido no se salga */
+  z-index: -1; /* Asegura que las imágenes estén detrás del contenido */
 }
 
+/* Cada enlace ocupa todo el contenedor */
 .slideshow a {
+  position: absolute;
   width: 100%;
   height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
-/* Mantiene el mismo estilo de las imágenes */
+/* Diapositivas */
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen en el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  animation: slideShow 15s infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideShow 15s infinite; /* Ajusta el tiempo total de la animación */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -79,24 +77,14 @@ body {
 .slide8 { background-image: url('https://i.ibb.co/mqBz3sH/En-la-escuela-4.jpg'); }
 .slide9 { background-image: url('https://i.ibb.co/WsWB35C/En-la-escuela-5.jpg'); }
 
+/* Animación de cambio de diapositiva */
 @keyframes slideShow {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  33.33% {
-    opacity: 1;
-  }
-  53.33% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
 }
-
 
 body {
   margin: 0;
