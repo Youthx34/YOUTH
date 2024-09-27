@@ -1,0 +1,353 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin: 0; /* Elimina el margen por defecto */
+  position: absolute; /* Posiciona el elemento absolutamente para usar top y left */
+  top: 50%; /* Coloca el borde superior en el 50% del contenedor padre (body) */
+  left: 50%; /* Coloca el borde izquierdo en el 50% del contenedor padre (body) */
+  transform: translate(-50%, -50%); /* Ajusta el elemento para que esté centrado */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+  #lyrics {
+      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+      margin-bottom: 530px;
+      letter-spacing: 3px;
+  }
+
+}
+
+:root {
+  --dark-color: #722F37;
+}
+body {
+  color: azure;
+  width: 100%;
+  height: 100vh; /* Ajusta el alto para que ocupe toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative; /* Necesario para el fondo */
+  overflow: hidden; /* Oculta el contenido extra */
+}
+/* Slideshow */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegura que no haya scroll y el contenido no se salga */
+  z-index: -1; /* Asegura que las imágenes estén detrás del contenido */
+}
+
+/* Cada enlace ocupa todo el contenedor */
+.slideshow a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Diapositivas */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideShow 30s infinite; /* Ajusta la duración total de la animación */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Aplicar las clases de imágenes */
+.slide1 { 
+  background-image: url('https://i.ibb.co/j5VdxGv/Casita-del-arbol-1.jpg'); 
+  animation-delay: 0s; 
+}
+.slide2 { 
+  background-image: url('https://i.ibb.co/6wK7JRS/Casita-del-arbol-2.jpg'); 
+  animation-delay: 5s; 
+}
+.slide3 { 
+  background-image: url('https://i.ibb.co/1LT0PV6/En-el-taxi-2.jpg'); 
+  animation-delay: 10s; 
+}
+.slide4 { 
+  background-image: url('https://i.ibb.co/6wYVcpp/En-el-taxi.jpg'); 
+  animation-delay: 15s; 
+}
+.slide5 { 
+  background-image: url('https://i.ibb.co/0Vn6s1n/En-la-escuela-1.jpg'); 
+  animation-delay: 20s; 
+}
+.slide6 { 
+  background-image: url('https://i.ibb.co/XF5QXcc/En-la-escuela-2.jpg'); 
+  animation-delay: 25s; 
+}
+.slide7 { 
+  background-image: url('https://i.ibb.co/5RGbRqQ/En-la-escuela-3.jpg'); 
+  animation-delay: 30s; 
+}
+.slide8 { 
+  background-image: url('https://i.ibb.co/mqBz3sH/En-la-escuela-4.jpg'); 
+  animation-delay: 35s; 
+}
+.slide9 { 
+  background-image: url('https://i.ibb.co/WsWB35C/En-la-escuela-5.jpg'); 
+  animation-delay: 40s; 
+}
+
+/* Animación de cambio de diapositiva */
+@keyframes slideShow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  20% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.sparkle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255,215,0,1) 0%, rgba(253, 72, 244, 0.288) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: sparkle 3s infinite;
+}
+
+@keyframes sparkle {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  10% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  30% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1);
+      opacity: 0;
+  }
+  80% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
+
+
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #7e2c35;
+}
+
+h1 {
+  margin: 20px;
+}
+
+/* Contenedor para los cuadros */
+.container {
+  position: relative;
+  width: 300px; /* Ajusta el tamaño según sea necesario */
+  height: 300px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilos para los cuadros */
+.box {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  background-color: rgb(129, 0, 97);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px #f0e003;
+  opacity: 0; /* Ocultar los cuadros por defecto */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Estilos del icono y cuadro de texto emergente */
+.icon-container {
+  position: absolute; /* Asegúrate de que esté posicionado correctamente dentro de la container */
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Ajusta el tamaño del ícono */
+  height: 50px;
+  background-image: url('https://i.ibb.co/4Jj0DSp/regalo.jpg'); /* URL del ícono */
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Estilo del cuadro de texto */
+.text-box {
+  display: none; /* Ocultar el cuadro de texto por defecto */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  padding: 10px;
+  background-color: #722F37;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Mostrar el texto cuando el cursor está encima del ícono */
+.icon-container:hover .text-box {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Posicionamiento de los cuadros */
+.box-left { 
+  top: 50%;
+  left: -200px; 
+}
+.box-right { 
+  top: 50%;
+  right: -200px; 
+
+}
+.box-top { 
+  top: -80px;
+  left: 80%;
+}
+.box-bottom { 
+  top: -100px;
+  left: 130%;
+}
+.box-top-left {
+  top: -80px;
+  left: 25px;
+}
+.box-bottom-right {
+  top: -105px;
+  left: -50%;
+}
+
+/* Mostrar los cuadros solo cuando el cursor está encima del ícono */
+.icon-container:hover .box {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animación de aparición de los cuadros */
+.box {
+  animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries para tamaños de pantalla diferentes */
+@media screen and (max-width: 600px) {
+  /* Estilos para pantallas pequeñas */
+  h1 {
+      font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Estilos para pantallas medianas */
+  h1 {
+      font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Estilos para pantallas grandes */
+  h1 {
+      font-size: 2em;
+  }
+}
